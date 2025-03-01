@@ -18,17 +18,19 @@ if test ! $(which brew); then
 fi
 
 echo "Generating symlinks..."
+
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -sw $HOME/dotfiles/.zshrc $HOME/.zshrc
 
-# Removes nvim from $HOME/.config (if it exists) and symlinks the nvim folder from the .dotfiles
 rm -rf $HOME/.config/nvim
 ln -sw $HOME/dotfiles/nvim $HOME/.config/nvim
 
-# Removes .gitconfig from $HOME (if it exists) and symlinks the .gitconfig file from the .dotfiles
 rm -rf $HOME/.gitconfig
 ln -sw $HOME/dotfiles/.gitconfig $HOME/.gitconfig
+
+rm -rf $HOME/.gitignore
+ln -sw $HOME/dotfiles/.gitignore $HOME/.gitignore
 
 # Update Homebrew recipes
 brew update
