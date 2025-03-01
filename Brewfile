@@ -2,6 +2,7 @@
 brew 'zsh'
 brew 'ruby-install'
 brew 'chruby'
+brew 'nvim'
 brew 'gnupg'
 brew 'fzf'
 brew 'ripgrep'
