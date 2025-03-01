@@ -1,0 +1,18 @@
+[includeIf "gitdir:~/Desktop/Work/"]
+  path = ~/.gitconfig-work
+
+[includeIf "gitdir:~/Desktop/Cedar/"]
+  path = ~/.gitconfig-cedar
+
+[includeIf "gitdir:*"]
+  path = ~/.gitconfig-public
+
+[core]
+  excludesfile = /Users/nicolasbuero/.gitignore
+
+[credential]
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[safe]
+	directory = /app
