@@ -1,0 +1,2 @@
+# nvim
+NeoVim personal setup
