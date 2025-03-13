@@ -20,3 +20,6 @@ vim.keymap.set('n', '<C-.>', ':+tabnext<CR>')
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.wo.number = true
+
+-- Telescope live grep args keybindings
+vim.keymap.set("n", "<C-/>", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
