@@ -1,3 +1,0 @@
-return {
-  "thoughtbot/vim-rspec",
-}
