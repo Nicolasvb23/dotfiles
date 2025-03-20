@@ -61,6 +61,8 @@ return {
       vim.keymap.set("n", "<C-b>", builtin.buffers, {})
       vim.keymap.set("n", "<C-s>", builtin.grep_string, {})
       vim.keymap.set("n", "<C-o>", builtin.oldfiles, {})
+      vim.keymap.set("n", "<C-/>", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+      vim.keymap.set("n", "<C-'>", builtin.live_grep, {})
 
       require("telescope").load_extension("ui-select")
       require("telescope").load_extension("fzf")

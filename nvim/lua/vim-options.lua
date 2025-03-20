@@ -18,8 +18,8 @@ vim.keymap.set('n', '<C-t>', ':NvimTreeFindFile<CR>')
 vim.keymap.set('n', '<C-,>', ':-tabnext<CR>')
 vim.keymap.set('n', '<C-.>', ':+tabnext<CR>')
 
+-- Function to copy the relative path to the clipboard
+vim.api.nvim_set_keymap('n', '<leader>cp', [[:let @+=expand('%')<CR>]], { noremap = true, silent = true })
+
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.wo.number = true
-
--- Telescope live grep args keybindings
-vim.keymap.set("n", "<C-/>", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
