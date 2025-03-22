@@ -2,6 +2,7 @@ return {
   "airblade/vim-gitgutter",
   "tpope/vim-bundler",
   "tpope/vim-endwise",
-  "tpope/vim-fugitive",
-  "tpope/vim-rails"
+  "tpope/vim-rails",
+  "bronson/vim-trailing-whitespace",
+  "github/copilot.vim"
 }
