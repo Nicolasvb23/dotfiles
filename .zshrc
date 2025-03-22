@@ -149,3 +149,6 @@ zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
 zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# cedar-neovim config
+alias cnvim="NVIM_APPNAME=cedar-neovim nvim"
