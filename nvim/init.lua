@@ -17,12 +17,6 @@ require("vim-options")
 
 require("lazy").setup("plugins")
 
- -- Enable persistent undo
-vim.opt.undofile = true
-
--- use clipboard
-vim.opt.clipboard = "unnamedplus"
-
 -- Fetch the GitHub Enterprise URL from the environment variable
 local ghe_url = os.getenv("GITHUB_ENTERPRISE_URL")
 
