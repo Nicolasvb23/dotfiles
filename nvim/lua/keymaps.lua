@@ -1,10 +1,11 @@
 -- Navigate vim panes better
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
+vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
+vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
+vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 
 -- Better window navigation
+vim.keymap.set("n", "<C-t>", ":tabnew<CR>")  -- Mapea Ctrl+t para abrir una nueva pestaña
 vim.keymap.set('n', '<C-,>', ':-tabnext<CR>')
 vim.keymap.set('n', '<C-.>', ':+tabnext<CR>')
 
@@ -23,7 +24,7 @@ vim.keymap.set("n", "<C-b>", function() Snacks.picker.buffers(opts) end)
 vim.keymap.set("n", "<C-/>", function() Snacks.picker.grep(opts) end)
 vim.keymap.set("n", "<C-n>", function() Snacks.explorer(opts) end)
 vim.keymap.set("n", "<C-p>", function() Snacks.picker.files(opts) end)
-vim.keymap.set("n", "<C-k>", function()
+vim.keymap.set("n", "<C-;>", function()
   local selected_text = vim.fn.getreg('"')
 
   if selected_text:find("\n") then
