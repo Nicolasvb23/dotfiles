@@ -20,4 +20,12 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {})
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
 
+-- Snacks keymaps
+local opts = { hidden = true }
+
+vim.keymap.set("n", "<C-b>", function() Snacks.picker.buffers(opts) end)
+vim.keymap.set("n", "<C-/>", function() Snacks.picker.grep(opts) end)
+vim.keymap.set("n", "<C-n>", function() Snacks.explorer(opts) end)
+vim.keymap.set("n", "<C-p>", function() Snacks.picker.files(opts) end)
+
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>') -- Clear search highlights
