@@ -23,5 +23,19 @@ vim.keymap.set("n", "<C-b>", function() Snacks.picker.buffers(opts) end)
 vim.keymap.set("n", "<C-/>", function() Snacks.picker.grep(opts) end)
 vim.keymap.set("n", "<C-n>", function() Snacks.explorer(opts) end)
 vim.keymap.set("n", "<C-p>", function() Snacks.picker.files(opts) end)
+vim.keymap.set("n", "<C-k>", function()
+  local selected_text = vim.fn.getreg('"')
+
+  if selected_text:find("\n") then
+    selected_text = ""
+  end
+
+  Snacks.picker.grep({
+    exclude = { "**/docs/**", "**/test/**" },
+    need_search = true,
+    regex = true,
+    search = selected_text,
+  })
+end)
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>') -- Clear search highlights
