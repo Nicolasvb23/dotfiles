@@ -21,5 +21,4 @@
   "vim-rails": { "branch": "master", "commit": "d3954dfe3946c9330dc91b4fbf79ccacb2c626c0" },
   "vim-rhubarb": { "branch": "master", "commit": "386daa2e9d98e23e27ad089afcbe5c5a903e488d" },
   "vim-trailing-whitespace": { "branch": "master", "commit": "5540b3faa2288b226a8d9a4e8244558b12c598aa" },
-  "which-key.nvim": { "branch": "main", "commit": "0e76a87ac51772569aec678dc74baa8e2a86100c" }
 }
