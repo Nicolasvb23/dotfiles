@@ -23,7 +23,13 @@ local opts = { hidden = true }
 vim.keymap.set("n", "<C-b>", function() Snacks.picker.buffers(opts) end)
 vim.keymap.set("n", "<C-/>", function() Snacks.picker.grep(opts) end)
 vim.keymap.set("n", "<C-n>", function() Snacks.explorer(opts) end)
-vim.keymap.set("n", "<C-p>", function() Snacks.picker.files(opts) end)
+vim.keymap.set("n", "<C-p>", function() Snacks.picker.files(
+  {
+    hidden = true,
+    cmd = "rg",
+  }
+) end)
+
 vim.keymap.set("n", "<C-;>", function()
   local selected_text = vim.fn.getreg('"')
 
