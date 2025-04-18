@@ -27,6 +27,18 @@ return {
           },
         },
       })
+
+      lspconfig.pyright.setup({
+        settings = {
+          python = {
+            analysis = {
+              autoSearchPaths = true,
+              diagnosticMode = "openFilesOnly",
+              useLibraryCodeForTypes = true
+            }
+          }
+        }
+      })
     end,
   },
 }
